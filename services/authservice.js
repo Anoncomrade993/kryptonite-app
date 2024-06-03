@@ -29,7 +29,6 @@ const generateOTP = async (email) => {
       return;
     }
 
-
     const code = Math.floor(100000 + Math.random() * 900000).toString();
 
     const otp = new Otp({ email: kryptonian.email, code });

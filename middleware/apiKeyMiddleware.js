@@ -9,7 +9,7 @@ const validateApiKey = async (req, res, next) => {
 
     const kryptonian = await Kryptonian.findOne({ apiKey }); // Find the Kryptonian by API key
     if (!kryptonian) {
-        return res.status(401).json({ error: 'Invalid API key' }); // Respond with 401 if API key is invalid
+        return res.status(404).json({ error: 'Invalid API key' }); // Respond with 401 if API key is invalid
     }
 
     req.kryptonian = kryptonian; // Attach the Kryptonian to the request object
