@@ -16,7 +16,18 @@ app.use(bodyParser.urlencoded({ extended: true })); // Use Body Parser middlewar
 //routes
 app.use('/api/auth', authRoutes); // Use authentication routes for /api/auth
 app.use('/api/files', fileRoutes); // Use file routes for /api/files
+/***
+curl -X POST https://kryptonite-app-oor2.onrender.com/api/auth/register \
+-H "Content-Type: application/json" \
+-d '{
+  "password": "yourPassword",
+  "email": "yourEmail@example.com"
+}'
 
+
+
+
+**/
 
 
 // Database connection
